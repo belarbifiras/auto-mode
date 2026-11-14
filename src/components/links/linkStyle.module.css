@@ -1,0 +1,39 @@
+.linkStyle {
+    border: 0;
+    color: rgba(255, 255, 255, 0.86);
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 38px;
+    padding: 0 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.link {
+    margin: 0;
+    font-size: 0.92rem;
+    color: inherit;
+    font-family: var(--linkFont);
+    font-weight: 800;
+    text-transform: capitalize;
+}
+.linkStyle:hover {
+    background-color: rgba(201, 161, 95, 0.16);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.linkStyle:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none;
+}
+
+@media (max-width: 760px) {
+    .linkStyle {
+        justify-content: center;
+        width: 100%;
+    }
+}

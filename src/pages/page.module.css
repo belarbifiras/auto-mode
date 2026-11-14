@@ -1,0 +1,530 @@
+﻿.loginPageWrapper {
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.homeIntro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 50px auto;
+    width: min(1140px, 100%);
+    padding: 2rem;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(2, 27, 43, 0.08);
+    box-shadow: 0 24px 60px rgba(2, 27, 43, 0.08);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body[data-theme='dark'] .homeIntro {
+    background: rgba(25, 40, 55, 0.9);
+    border-color: rgba(200, 220, 240, 0.08);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.homeIntroLogo {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.homeIntroImageLeft,
+.homeIntroImageRight {
+    width: 100%;
+    max-width: 220px;
+}
+
+.homeWelcomingTitle {
+    color: var(--secondlyColor);
+    width: 100%;
+    font-family: var(--firstFont);
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    text-align: left;
+    line-height: 1.05;
+    margin: 0;
+}
+
+.homeWelcomingSlogan {
+    font-family: var(--secondFont);
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    text-align: left;
+    margin: 1rem 0 0;
+}
+
+.pageWrapper {
+    display: flex;
+    justify-content: center;
+    width: min(1140px, 100%);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.SpanhomeWelcomingTitle {
+    color: var(--thirdColor);
+}
+
+.carDetails_container {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 16px;
+}
+.carDetails_backRow {
+    display: flex;
+    justify-content: flex-start;
+}
+.carDetails_hero {
+    width: 100%;
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #f5f8fb 0%, #ffffff 100%);
+    transition: background 0.3s ease;
+}
+
+body[data-theme='dark'] .carDetails_hero {
+    background: linear-gradient(180deg, #1a2f3f 0%, #0f1821 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(2, 27, 43, 0.08);
+    box-shadow: 0 20px 40px rgba(2, 27, 43, 0.08);
+}
+.carDetails_heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carDetails_heroPlaceholder {
+    color: #6a6a6a;
+    font-size: 18px;
+}
+.carDetails_detailsCard {
+    margin-top: 22px;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 24px;
+    border-radius: 22px;
+    box-shadow: 0 18px 36px rgba(2, 27, 43, 0.08);
+}
+.carDetails_title {
+    margin: 0 0 8px 0;
+    font-size: 2.1rem;
+    color: var(--secondlyColor);
+}
+.carDetails_type {
+    margin: 0 0 16px 0;
+    color: var(--thirdColor);
+    font-weight: 700;
+}
+.carDetails_infoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 24px;
+}
+.carDetails_infoItem {
+    display: flex;
+    flex-direction: column;
+}
+.carDetails_infoLabel {
+    font-size: 12px;
+    color: #7b7b7b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.carDetails_infoValue {
+    font-size: 1rem;
+    color: var(--secondlyColor);
+    font-weight: 700;
+}
+.carDetails_notFound {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.expenseLoading {
+    padding: 20px;
+}
+
+.expenseContainer {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.expenseTitle {
+    margin: 0 0 16px;
+    font-family: var(--firstFont);
+    color: var(--secondlyColor);
+}
+
+.expenseGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.expenseCard {
+    background-color: var(--surfaceElevated);
+    border-radius: 14px;
+    border: 1px solid rgba(11, 29, 42, 0.08);
+    box-shadow: 0 16px 36px rgba(11, 29, 42, 0.12);
+    padding: 20px;
+}
+
+.expenseCardFuel .expenseCardTitle {
+    color: #3498db;
+}
+
+.expenseCardRepair .expenseCardTitle {
+    color: #e74c3c;
+}
+
+.expenseCardOil .expenseCardTitle {
+    color: #f39c12;
+}
+
+.expenseCardTitle {
+    margin-bottom: 15px;
+}
+
+.expenseEmpty {
+    color: #7f8c8d;
+}
+
+.expenseTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expenseTableHeadFuel {
+    border-bottom: 2px solid #3498db;
+    background: rgba(52, 152, 219, 0.08);
+}
+
+.expenseTableHeadRepair {
+    border-bottom: 2px solid #e74c3c;
+    background: rgba(231, 76, 60, 0.08);
+}
+
+.expenseTableHeadOil {
+    border-bottom: 2px solid #f39c12;
+    background: rgba(243, 156, 18, 0.08);
+}
+
+.expenseRow {
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.expenseCellHead {
+    padding: 10px;
+    text-align: left;
+    font-family: var(--buttonFont);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+}
+
+.expenseCell {
+    padding: 10px;
+}
+
+.expenseTotal {
+    padding: 10px;
+    font-weight: 700;
+    color: var(--accentColor);
+}
+
+/* Premium refresh overrides */
+.homeIntro {
+    background: linear-gradient(135deg, rgba(11, 29, 42, 0.04), rgba(201, 161, 95, 0.14));
+    border: 1px solid rgba(11, 29, 42, 0.08);
+    box-shadow: 0 24px 60px rgba(11, 29, 42, 0.12);
+}
+
+.homeWelcomingTitle {
+    letter-spacing: -0.02em;
+}
+
+.homeWelcomingSlogan {
+    color: var(--inkMuted);
+}
+
+.carDetails_detailsCard {
+    border: 1px solid rgba(11, 29, 42, 0.08);
+    background: var(--surfaceElevated);
+    box-shadow: 0 20px 44px rgba(11, 29, 42, 0.12);
+}
+
+.carDetails_hero {
+    border: 1px solid rgba(11, 29, 42, 0.08);
+    box-shadow: 0 26px 52px rgba(11, 29, 42, 0.12);
+}
+
+@media (max-width: 960px) {
+    .homeIntro,
+    .carDetails_infoGrid {
+        flex-direction: column;
+    }
+    .homeIntro {
+        padding: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .loginPageWrapper {
+        padding: 1rem;
+    }
+
+    .homeIntro {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .homeIntroImageLeft,
+    .homeIntroImageRight {
+        max-width: 100%;
+    }
+
+    .carDetails_hero {
+        height: 260px;
+    }
+    .carDetails_title {
+        font-size: 1.75rem;
+    }
+    .carDetails_infoGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dashboardPage {
+    min-height: 100vh;
+    padding: 2rem 1rem 3rem;
+    background:
+        radial-gradient(circle at top left, rgba(215, 38, 61, 0.12), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(11, 42, 65, 0.16), transparent 35%),
+        linear-gradient(180deg, #f6f8fb 0%, #eef3f7 100%);
+}
+
+.dashboardContainer {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 28px;
+    border: 1px solid rgba(2, 27, 43, 0.08);
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 20px 40px rgba(2, 27, 43, 0.08);
+}
+
+/* Page refresh overrides */
+.loginPageWrapper {
+    align-items: center;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.loginCard {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.85fr) minmax(320px, 1fr);
+    width: min(980px, 100%);
+    overflow: hidden;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid rgba(2, 27, 43, 0.08);
+    box-shadow: 0 22px 50px rgba(2, 27, 43, 0.14);
+}
+
+.leftSide {
+    min-height: 540px;
+    background: #08263c;
+}
+
+.leftSide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 4vw, 2rem);
+}
+
+.homePage {
+    padding-bottom: 3rem;
+}
+
+.homeIntro {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
+    gap: 1rem;
+    margin: 1.5rem auto 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 18px 42px rgba(2, 27, 43, 0.09);
+}
+
+.homeIntroLogo {
+    width: clamp(140px, 18vw, 210px);
+}
+
+.homeIntroImageLeft,
+.homeIntroImageRight {
+    max-width: 260px;
+    justify-self: center;
+    object-fit: contain;
+}
+
+.homeWelcomingTitle,
+.homeWelcomingSlogan {
+    width: min(980px, calc(100% - 2rem));
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.homeWelcomingTitle {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.homeWelcomingSlogan {
+    max-width: 760px;
+    color: var(--inkMuted);
+    font-family: var(--linkFont);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+}
+
+.pageWrapper {
+    padding-top: 1.5rem;
+}
+
+.carDetails_container {
+    width: min(1120px, 100%);
+    padding: 1rem;
+}
+
+.carDetails_backRow {
+    margin-bottom: 0.75rem;
+}
+
+.btn,
+.dashboardBackButton {
+    border: 0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    background: #08263c;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.carDetails_hero,
+.carDetails_detailsCard {
+    border-radius: 8px;
+}
+
+.carDetails_hero {
+    height: clamp(260px, 42vw, 460px);
+}
+
+.carDetails_detailsCard {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.carDetails_type {
+    color: var(--accentColor);
+}
+
+.carDetails_infoItem {
+    padding: 0.9rem;
+    border-radius: 8px;
+    background: #f7fafb;
+}
+
+.carDetailsExpensePanel {
+    margin-top: 1rem;
+}
+
+.dashboardContainer {
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.dashboardHero {
+    padding: 1.25rem;
+    border-radius: 8px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #08263c 0%, #1f4f57 100%);
+}
+
+.dashboardHero h1,
+.dashboardHero p {
+    margin: 0.25rem 0;
+}
+
+.dashboardEyebrow {
+    color: rgba(255, 255, 255, 0.74);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.tabButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tabButton,
+.activeTab {
+    border: 1px solid rgba(2, 27, 43, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.tabButton {
+    color: var(--secondlyColor);
+    background: #f7fafb;
+}
+
+.activeTab {
+    color: #ffffff;
+    background: var(--accentColor);
+}
+
+.tabContent {
+    margin-top: 1rem;
+}
+
+@media (max-width: 780px) {
+    .loginCard,
+    .homeIntro {
+        grid-template-columns: 1fr;
+    }
+
+    .leftSide {
+        min-height: 220px;
+    }
+
+    .homeIntroImageLeft,
+    .homeIntroImageRight {
+        max-width: 100%;
+    }
+
+    .tabButtons {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

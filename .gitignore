@@ -1,0 +1,38 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+automodebackend/.mvn/wrapper/maven-wrapper.jar
+automodebackend/target/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# Java and IDE
+.idea/
+*.iml
+*.class
+*.log
+
+# Environment and local overrides
+.env
+.env.*
+!.env.example
+compose.override.yaml
+docker-compose.override.yml
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
