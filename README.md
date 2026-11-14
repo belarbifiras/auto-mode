@@ -175,30 +175,3 @@ GET  /vehicles/bestPublic
 GET  /vehicles/{matricule}/repairExpensesPublic
 ```
 
-Les opérations de création et de modification nécessitent une authentification JWT.
-
-## Publication sur Git
-
-Avant le premier push :
-
-```powershell
-git init
-git add .
-git status
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/<utilisateur>/<depot>.git
-git push -u origin main
-```
-
-Vérifier avant le commit que les dossiers suivants ne sont pas suivis :
-
-- `node_modules/`
-- `build/`
-- `automodebackend/target/`
-- `.idea/`
-- les fichiers `.env`
-
-## Licence
-
-Aucune licence open source n'est définie pour le moment. Ajouter une licence avant une distribution publique si nécessaire.
